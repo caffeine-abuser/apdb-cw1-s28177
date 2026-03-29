@@ -1,5 +1,6 @@
-class Employee(string username) : IBaseUser
+class Employee(string username, string name, string surname, string dept) : BaseUser(username, name, surname)
 {
-    public string UserName { get; set; } = username;
-    public int MaxSimultaneousRentals { get; } = 5;
+	public override UserType Type => UserType.EMPLOYEE;
+	public override int MaxSimultaneousRentals => 5;
+	public string Department = dept;
 }

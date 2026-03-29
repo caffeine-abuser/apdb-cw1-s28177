@@ -1,6 +1,6 @@
-class Student(string username, string group) : IBaseUser
+class Student(string username, string name, string surname, string group) : BaseUser(username, name, surname)
 {
-    public string UserName { get; set; } = username;
-    public int MaxSimultaneousRentals { get; } = 2;
-    public string Group { get; set; } = group;
+	public override UserType Type => UserType.STUDENT;
+	public override int MaxSimultaneousRentals => 2;
+	public string Group { get; set; } = group;
 }
