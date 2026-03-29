@@ -20,7 +20,7 @@ the file structure is as follows:
 in a real application, the RentalService class would probably be replaced with a proper database (or at least a thin wrapper over one),
 and RentalReporter would only run queries against it.
 
-> ![NOTE]  
+> [!NOTE]  
 > fun fact! i did initially try to actually get this thing working with sqlite; alas, properly constructing parametrized queries turned out to be a titanic job  
 > ESPECIALLY queries with `SELECT ... WHERE foo IN (...)`, because apparently there's... no proper mapping from C# arrays to `IN (...)`?
 
